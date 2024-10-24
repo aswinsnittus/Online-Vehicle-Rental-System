@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Data Form</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container py-4 py-xl-5">
+        <h2>Submit Vehicle Details</h2>
+        <form action="/submit_form" method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="driverName" class="form-label">Name</label>
+                <input class="form-control" type="text" id="driverName" name="driverName" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email ID</label>
+                <input class="form-control" type="email" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="phoneNumber" class="form-label">Phone Number</label>
+                <input class="form-control" type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" required>
+            </div>
+            <div class="mb-3">
+                <label for="licenseNumber" class="form-label">License Number</label>
+                <input class="form-control" type="text" id="licenseNumber" name="licenseNumber" required>
+            </div>
+            <div class="mb-3">
+                <label for="adharNumber" class="form-label">Aadhar Number</label>
+                <input class="form-control" type="text" id="adharNumber" name="adharNumber" required>
+            </div>
+            <div class="mb-3">
+                <label for="licenseImage" class="form-label">License Image</label>
+                <input class="form-control" type="file" id="licenseImage" name="licenseImage" required>
+            </div>
+            <div class="mb-3">
+                <label for="adharImage" class="form-label">Aadhar Image</label>
+                <input class="form-control" type="file" id="adharImage" name="adharImage" required>
+            </div>
+            <div class="mb-3">
+                <label for="carModel" class="form-label">Car Model</label>
+                <select class="form-control" id="carModel" name="carModel" required>
+                    <option value="Maruti Suzuki Swift">Maruti Suzuki Swift</option>
+                    <option value="Hyundai Creta">Hyundai Creta</option>
+                    <option value="Tata Nexon">Tata Nexon</option>
+                    <option value="Honda City">Honda City</option>
+                    <option value="Toyota Innova">Toyota Innova</option>
+                    <option value="Mercedes-Benz E-Class">Mercedes-Benz E-Class</option>
+                </select>
+            </div>
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
